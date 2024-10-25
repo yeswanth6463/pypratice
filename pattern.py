@@ -22,3 +22,23 @@ for i in range(n):
         else:
             print(" ",end=" ")
     print()
+    
+
+for i in range(n):
+    for j in range(n):
+        if i==0 or i==n-2 or j==0 or j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+for i in range(n):
+    for j in range(n):
+        val=(n-j-1)%9+1
+        if i==j or i+j==n-1:
+            print(val,end=" ")
+            val+=1
+        else:
+            print(" ",end=" ")
+    print()           
+
