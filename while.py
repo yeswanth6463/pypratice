@@ -33,3 +33,31 @@ while i in l1[i]:
 #         print(l1[i][j], end="")
 #         j += 1
 #     i += 1
+
+#print the count of prime num from 3
+n=12498765437
+c=0
+l=[]
+while n!=0:
+    rem=n%10
+    for i in range(2,rem//2+1):
+        if rem%i==0:
+            c+=1
+        else:
+            l.append(rem)
+    n//=10
+print(len(l))
+
+# n=int(input('a: '))
+# b=n
+# s=0
+# a=len(str(n))
+# for i in range(1,a+1):
+#     rem=n%10
+#     prod=rem**a
+#     s+=prod
+#     a-=1
+#     n//=10
+# if s==b:
+#     print(f'{s} is disarium')
+    
