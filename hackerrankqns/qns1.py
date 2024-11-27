@@ -1,16 +1,18 @@
 if __name__ == '__main__':
-    x = int(input())
-    y = int(input())
-    z = int(input())
-    n = int(input())
     l1=[]
-    for i in range(n+x):
-        for j in range(n+y):
-            for k in range(n+z):
-                l1.append([i,j,k])
-    l2=[]            
-    for s in l1:                
-      if sum(s)!=n:
-        l2.append(s)
-print(l2)
-
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        l1.append([name,score])
+    l2=[]
+    for i in l1:
+      for j in i:
+        if isinstance(j,float):
+            l2.append(j)
+    l3=min(l2)
+    for k in l1:
+      for s in k:
+        if isinstance(s,float):
+          if s==l3:
+            print(k[0])
+          
