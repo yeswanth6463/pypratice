@@ -1,0 +1,182 @@
+ qns 1
+ select * from book 
+ where pubdate>='01-jan-81' and pubdate<='31-dec-85';
+
+   BID BNAME                          PRICE AUTHOR                         PUBDATE   LIBRARY_ID
+------ ------------------------- ---------- ------------------------------ --------- ----------
+     1 the great gatsby                 500 scott                          31-DEC-81          1
+     5 new horizons                     400 alice                          23-JAN-81          2
+*******************************************************************************************
+
+qns 2
+
+select bid,bname,price from book
+where  price>500 and price<1000
+/
+
+  BID BNAME                          PRICE
+----- ------------------------- ----------
+    2 moby-dick                        700
+
+*******************************************************************************************
+qns 3
+> select price from book
+  group by price
+  having count(*)>1;
+
+  PRICE
+-------
+    400
+
+*******************************************************************************************
+
+> qns 4
+ select count(*) from book
+ group by library_id
+ having count(*)>1
+ /
+
+UNT(*)
+------
+     2
+*******************************************************************************************
+>qns 5
+
+  1select pubname , bname from book
+  2 group by bname,pubname
+  3having count(*)>1
+SQL> /
+
+no rows selected
+*******************************************************************************************
+
+>qns 6
+
+SQL> select lname from library
+  2  where library_id in(select library_id from book
+  3  where bname='moby-dick');
+
+LNAME
+-------------------------
+kolkata national library
+
+>qns 7
+
+SQL> select bname from book
+  2  where library_id in (select library_id from library
+  3  where lname='chennai central library');
+
+BNAME
+-------------------------
+the great Gatsby
+
+>qns 8
+
+
+SQL> select bname from book
+  2  where library_id in(select library_id from library
+  3  where lname='mumbai university library') and pubdate<'01-jan-1984';
+
+BNAME
+-------------------------
+1984
+
+>qns 9
+
+  
+ 1  select * from book
+ 2  where pubdate in( select min(pubdate)from book
+ 3* where pubdate >(select min(pubdate) from book))
+QL> /
+
+      BID BNAME                          PRICE AUTHOR                         PUBDATE   LIBRARY_ID
+--------- ------------------------- ---------- ------------------------------ --------- ----------
+        4 pride and prejudice              300 austen                         23-JAN-80          4
+
+>qns 10
+
+
+  1  select * from ( select rownum slno,book.* from book)
+  2* where slno > (select count(*)-2 from book)
+SQL> /
+
+      SLNO        BID BNAME                          PRICE AUTHOR                         PUBDATE   
+---------- ---------- ------------------------- ---------- ------------------------------ --------- 
+         4          4 pride and prejudice              300 austen                         23-JAN-80     
+         5          5 new horizons                     400 alice                          23-JAN-81     
+
+qns 11
+
+
+
+  1  select * from ( select rownum slno,library.* from library)
+  2* where mod(slno,2)=1
+SQL> /
+
+      SLNO LIBRARY_ID LNAME                     LOCATION                  ESTDATE
+---------- ---------- ------------------------- ------------------------- ---------
+         1          1 chennai central library   anna salai,chennai        10-NOV-24
+         3          3 mumbai university library fort,mumbai               22-DEC-83
+
+qns=12
+
+
+  1  select lname,location from library
+  2  where library_id in(select library_id from book
+  3* where price>500 and pubdate>'31-dec-81')
+SQL> /
+
+LNAME                     LOCATION
+------------------------- -------------------------
+kolkata national library  alipore, kolkata
+
+qns 13
+
+
+ 1  select l1.library_id, l1.estdate, b1.bname
+ 2  from library l1 ,book b1
+ 3* where l1.library_id=b1.library_id and bname='moby-dick'
+QL> /
+
+IBRARY_ID ESTDATE   BNAME
+--------- --------- -------------------------
+        2 11-JUN-75 moby-dick
+
+qns 14
+
+SQL> select l1.lname,l1.location,b1.bname,b1.price 
+  2  from library l1,book b1
+  3  where l1.library_id=b1.library_id and b1.author='scott' and l1.location='anna salai,chennai';
+
+LNAME                     LOCATION                  BNAME                          PRICE
+------------------------- ------------------------- ------------------------- ----------
+chennai central library   anna salai,chennai        the great gatsby                 500
+
+SQL> 
+qns 15
+
+select price from (select rownum slno, price from (select distinct price from book order by price desc)) where slno<=3
+
+/
+
+
+SQL> select price from (select rownum slno, price from (select distinct price from book order by pri
+ce desc)) where slno<=3
+  2  ;
+
+     PRICE
+----------
+       700
+       500
+       400
+
+
+
+
+
+
+
+
+
+
+
