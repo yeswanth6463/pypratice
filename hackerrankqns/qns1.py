@@ -9,10 +9,19 @@ if __name__ == '__main__':
       for j in i:
         if isinstance(j,float):
             l2.append(j)
-    l3=min(l2)
+    # l3=min(l2)
+    # for h in l2:
+    #   if h==l3:
+    #     l2.remove(h)
+        
+    # print(l2)
+    # l4=min(l2)
+    
+    #second minimum    
     for k in l1:
       for s in k:
         if isinstance(s,float):
-          if s==l3:
+          if s==l4 :
             print(k[0])
-          
+
+

@@ -63,3 +63,15 @@
     
 # l1=[i for i in range(0,11,2)]
 # print(l1)
+n1=int(input("enter the  row"))
+n2=int(input(" enter the cols"))
+res=[]
+val=[]
+for i in range(n1):
+    for j in range(n2):
+        u=int(input(" enter the user input"))
+        val.append(u)
+    
+        
+        
+print(val)
