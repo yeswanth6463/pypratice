@@ -85,8 +85,6 @@ if __name__ == '__main__':
 
 
 
-
-
 # flatten(lis)
 # print(flatten(lis))
 
