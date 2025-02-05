@@ -1,149 +1,274 @@
-n=10
-# str1="pyspiders"
+# # n=10
+# # str1="pyspiders"
 
-# val=0
-# for i in range(n):
-#     for j in range(n-i-1):
-#         print(" ",end=" ")
-#     for k in range(2*i+1):
-#         print(f"{str1[val%len(str1)]}",end=" ")
-#         val+=1
-#     print()
+# # val=0
+# # for i in range(n):
+# #     for j in range(n-i-1):
+# #         print(" ",end=" ")
+# #     for k in range(2*i+1):
+# #         print(f"{str1[val%len(str1)]}",end=" ")
+# #         val+=1
+# #     print()
 
-# for i in range(n):
-#     for j in range(n):
-#         if i+j<=n-1 or i>=j :
-#             print((i%9)+1,end=" ")
-#         else:
-#             print(" ",end=" ")
-#     print()
+# # for i in range(n):
+# #     for j in range(n):
+# #         if i+j<=n-1 or i>=j :
+# #             print((i%9)+1,end=" ")
+# #         else:
+# #             print(" ",end=" ")
+# #     print()
     
 
-# val=0
-# for i in range(n):
-#     for j in range(n-i-1):
-#         print(" ",end=" ")
-#     for k in range(2*i+1):
-#             print(chr((val%26)+65),end=" ")
-#             val +=1
-#     print()    
+# # val=0
+# # for i in range(n):
+# #     for j in range(n-i-1):
+# #         print(" ",end=" ")
+# #     for k in range(2*i+1):
+# #             print(chr((val%26)+65),end=" ")
+# #             val +=1
+# #     print()    
 
-# val=0
-# f=True
-# for i in range(n):
-#     for j in range(n-i-1):
-#         print(" ",end=" ")
-#     for k in range(2*i+1):
-#         if f==True:
-#             print(chr((val%26)+65),end=" ")
-#             val+=1
-#             f=False
-#         else:
-#             print((val%9)+1,end=" ")
-#             val+=1
-#             f=True
-#     print()
+# # val=0
+# # f=True
+# # for i in range(n):
+# #     for j in range(n-i-1):
+# #         print(" ",end=" ")
+# #     for k in range(2*i+1):
+# #         if f==True:
+# #             print(chr((val%26)+65),end=" ")
+# #             val+=1
+# #             f=False
+# #         else:
+# #             print((val%9)+1,end=" ")
+# #             val+=1
+# #             f=True
+# #     print()
         
 
-# yes="welcome to the assasin creed world"
-# l=[]
-# res=""
-# for i in yes:
-#     if i!=" ":
-#         res+=i
+# # yes="welcome to the assasin creed world"
+# # l=[]
+# # res=""
+# # for i in yes:
+# #     if i!=" ":
+# #         res+=i
+# #     else:
+# #         l.append(res)
+# #         res=""
+# # l.append(res)
+# # print(l)
+
+# # import random
+
+# # class gaming:
+# #     def __init__(self,usn):
+# #         self.usn=usn
+    
+# #     def playgame(self):
+# #         l=['2','3','4','5','6','7','8','9','10','j','k','q']
+# # #         d={'2':2,"3":3,"4":4,"5":5,'6':6,'7':7,'8':8,'9':9,'10':10,'j':11,'q':12,'k':13}
+# # #         print("welcome to the game \n pls select a card given option \n  2,3,4,5,6,7,8,9,10,J,Q,k ")
+# # #         src=0
+# # #         c_src=0
+# # #         for i in range(len(l)):
+# # #             n=input("enter the option: ")
+# # #             if n in d:
+# # #                 src+=d[n]
+# # #             else:
+# # #                 print("invalid input")
+# # #             print(src)
+            
+# # #             c_src+=d[random.choice(l)]
+# # #             print(c_src)
+        
+# # #         if src>c_src:
+# # #             print(f"{self.usn} you win")
+# # #         elif src==c_src:
+# # #             print("its a tie")
+# # #         else:
+# # #             print(f"{self.usn} you lose")
+    
+            
+            
+        
+    
+# # # obj=gaming('yesh')
+# # # obj.playgame()
+
+# # # class banking:
+# # #     def __init__(self,acno,pin,acname):
+# # #         self.acno=acno
+# # #         self.pin=pin
+# # #         self.acname=acname
+# # #         self.balance=5000
+        
+# # #     def deposit(self,amount):
+# # #         self.amount=amount
+# # #         self.total=amount+self.balance
+# # #         self.balance+=self.amount
+# # #         print(f"{self.total}")
+        
+# # #     def withdraw(self,wamount):
+# # #         self.wamount=wamount
+# # #         if self.wamount>self.balance:
+# # #             print("insufficient balance")
+# # #         else:
+# # #             self.withamount=self.balance-wamount
+# # #             self.balance-=self.wamount
+# # #             print(f"your current balance is {self.withamount}")
+    
+# # #     def enqr(self):
+# # #         print(f"account number is {self.acno}")
+# # #         print(f"account name is {self.acname}")
+# # #         print(f"account balance is {self.balance}")
+# # #         print(f"previous withdraw {self.wamount}")
+            
+
+# # # o=banking(1,123,'yesh')
+# # # o.deposit(1000)
+# # # o.withdraw(500)
+# # # o.enqr()
+    
+
+
+# # # l=[]
+
+# # # n=int(input("enter a number"))
+
+
+# # # if n >= 1:
+# # #     l.append(0)  # First Fibonacci number
+# # # if n >= 2:
+# # #     l.append(1)  
+    
+    
+    
+
+# # # for i in range(2,n):
+# # #     l.append(l[-1]+l[-2])
+
+# # # print(l)
+
+
+
+# # # l=[]
+# # # c=0
+# # # i=2
+# # # while c<=n:
+# # #     f=0
+# # #     j=2
+# # #     while j<=i//2:
+# # #         if i%j==0:
+# # #             f+=1
+# # #             break
+# # #         j+=1
+# # #     if f==0:
+# # #         l.append(i)
+# # #         c+=1
+# # #     i+=1
+# # # print(l)
+# # #lcm
+# # # n=12
+# # # m=15
+# # # mins=min(n,m)
+# # # for i in range(1,mins+1):
+# # #     if n%i==0 and m%i==0:
+# # #         hcf=i
+# # # print(hcf)
+
+# # # n1=10
+# # # n2=8
+# # # m=max(n1,n2)
+# # # while True:
+# # #     if m%n1==0 and m%n2==0:
+# # #         break
+# # #     m+=1
+# # # print(m,end=" ")
+
+# # # n=10
+# # # i=2
+# # # res=0
+# # # p=1
+# # # while n!=0:
+# # #     rem=n%2
+# # #     res=res+rem*p
+# # #     n//=2
+# # #     p*=10
+# # # print(res)
+
+# # # n=10
+# # # i=2
+# # # res=0
+# # # p=1
+# # # # while n!=0:
+# # # #     rem=n%8
+# # # #     res=res+rem*p
+# # # #     p*=10
+    
+# # # #     n//=8
+# # # # print(res)
+
+# # # l=['flower','flight','flow']
+# # # mins=len(min(l,key=len))
+# # # # print(mins)
+
+
+# # # r=''
+# # # for i in range(mins):
+# # #     c=True
+# # #     for j in l[1:]:
+# # #         if l[0][i]!=j[i]:
+# # #             c=False
+# # #             break
+# # #     if c:
+# # #       r+l[0][i]
+# # #     else:
+# # #       break
+# # # print(r)
+       
+       
+# # l=[" "]
+# # s="abc"
+# # for i in s:
+# #     v=[]
+# #     for j in l:
+# #         v+=[i+j]
+# #     l.extend(v)
+# # print(l[1:])
+
+# # # 
+# # s="racecars"
+
+# # r=""
+# # for i in range(len(s)):
+# #     for j in range(i+1,len(s)+1):
+# #         if s[i:j]==s[i:j][::-1]:
+# #             if len(s[i:j])>len(r):
+# #                 r=s[i:j]
+# # print(r)
+        
+        
+# s="aabbccaccacccbnaaa"
+# c=1
+# r=""
+# for i in range(len(s)-1):
+#     if s[i]==s[i+1]:
+#         print(s[i])
+#         c+=1
 #     else:
-#         l.append(res)
-#         res=""
-# l.append(res)
-# print(l)
-
-# import random
-
-# class gaming:
-#     def __init__(self,usn):
-#         self.usn=usn
-    
-#     def playgame(self):
-#         l=['2','3','4','5','6','7','8','9','10','j','k','q']
-#         d={'2':2,"3":3,"4":4,"5":5,'6':6,'7':7,'8':8,'9':9,'10':10,'j':11,'q':12,'k':13}
-#         print("welcome to the game \n pls select a card given option \n  2,3,4,5,6,7,8,9,10,J,Q,k ")
-#         src=0
-#         c_src=0
-#         for i in range(len(l)):
-#             n=input("enter the option: ")
-#             if n in d:
-#                 src+=d[n]
-#             else:
-#                 print("invalid input")
-#             print(src)
-            
-#             c_src+=d[random.choice(l)]
-#             print(c_src)
+#         r+=s[i]+str(c)
+#         c=1
+# r+=s[-1]+str(c)
+# print(r)
         
-#         if src>c_src:
-#             print(f"{self.usn} you win")
-#         elif src==c_src:
-#             print("its a tie")
-#         else:
-#             print(f"{self.usn} you lose")
-    
-            
-            
+l1=[1,3,3,2,4,3,4,3]
+for i in range(len(l1)-1):
+    if l1[i]==3:
+        if l1[i+1]==4:
+            pass
+        else:
+            val=l1.index(4)
+            temp=l1[i+1]
+            l1[i+1]=l1[val]
+            l1[val]=temp
         
-    
-# obj=gaming('yesh')
-# obj.playgame()
-
-# class banking:
-#     def __init__(self,acno,pin,acname):
-#         self.acno=acno
-#         self.pin=pin
-#         self.acname=acname
-#         self.balance=5000
-        
-#     def deposit(self,amount):
-#         self.amount=amount
-#         self.total=amount+self.balance
-#         self.balance+=self.amount
-#         print(f"{self.total}")
-        
-#     def withdraw(self,wamount):
-#         self.wamount=wamount
-#         if self.wamount>self.balance:
-#             print("insufficient balance")
-#         else:
-#             self.withamount=self.balance-wamount
-#             self.balance-=self.wamount
-#             print(f"your current balance is {self.withamount}")
-    
-#     def enqr(self):
-#         print(f"account number is {self.acno}")
-#         print(f"account name is {self.acname}")
-#         print(f"account balance is {self.balance}")
-#         print(f"previous withdraw {self.wamount}")
-            
-
-# o=banking(1,123,'yesh')
-# o.deposit(1000)
-# o.withdraw(500)
-# o.enqr()
-    
-
-
-l=[]
-
-n=int(input("enter a number"))
-
-
-if n >= 1:
-    l.append(0)  # First Fibonacci number
-if n >= 2:
-    l.append(1)  
-    
-    
-    
-
-for i in range(2,n):
-    l.append(l[-1]+l[-2])
-
-print(l)
+print(l1)
